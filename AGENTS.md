@@ -14,6 +14,7 @@ Before any task, read these files in full:
 
 - `PRODUCT_SPEC.md`
 - `ARCHITECTURE.md`
+- `docs/ui-reference/README.md`
 - `SPRINT.md`
 - `BACKLOG.md`
 - `README.md`

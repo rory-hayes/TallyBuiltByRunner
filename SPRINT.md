@@ -83,6 +83,7 @@ Allowed protected changes: package.json, package-lock.json or equivalent lockfil
 #### Goal
 
 Set up Tailwind CSS and the initial component primitive structure for a sober payroll operations interface. Add basic button, card, badge, table, input, select, dialog, and empty-state primitives if not already present.
+Use `docs/ui-reference/README.md` and the screenshots in `docs/ui-reference/` as the design direction for spacing, navigation, cards, tables, badges, and action styling.
 
 #### Non-Goals
 
@@ -96,6 +97,7 @@ Set up Tailwind CSS and the initial component primitive structure for a sober pa
 - [ ] Core UI primitives compile.
 - [ ] No product-specific heavy screens are implemented.
 - [ ] Component files follow a stable folder convention.
+- [ ] Primitives can support the dashboard, mapping, exception review, and audit pack reference screens.
 
 #### Validation
 
@@ -115,6 +117,7 @@ Allowed protected changes: None
 #### Goal
 
 Build the base authenticated-app shell layout with placeholder routes for Dashboard, Clients, Batches, Exceptions, Approvals, Packs, and Settings. Do not implement auth yet; use a static shell.
+Match the persistent left navigation and top bar pattern shown in `docs/ui-reference/dashboard.png`.
 
 #### Non-Goals
 
@@ -128,6 +131,7 @@ Build the base authenticated-app shell layout with placeholder routes for Dashbo
 - [ ] Placeholder routes render empty states.
 - [ ] Responsive layout works at desktop and tablet widths.
 - [ ] No database integration is added.
+- [ ] Shell structure can support the reference screens in `docs/ui-reference/`.
 
 #### Validation
 
@@ -263,4 +267,39 @@ Create the pure TypeScript check definition interface, check input/output contra
 - [ ] npm run typecheck
 - [ ] npm run lint
 - [ ] npm test
+- [ ] npm run build
+
+### TASK-009: Implement reference dashboard UI from screenshots
+
+Status: Ready
+Priority: P0
+Area: UI
+Risk: Low
+Depends on: TASK-004,TASK-006
+Allowed protected changes: None
+
+#### Goal
+
+Create the first high-fidelity mock dashboard screen using fake payroll data and the reference images in `docs/ui-reference/`. The dashboard should closely follow `docs/ui-reference/dashboard.png` for layout, navigation, top bar, metric cards, payroll-run table, recent exceptions, deadlines, rule-pack card, and chart section.
+
+#### Non-Goals
+
+- Do not add authentication.
+- Do not add database integration.
+- Do not implement real payroll calculations.
+- Do not build the client setup, exception detail, or audit pack screens in this task.
+
+#### Acceptance Criteria
+
+- [ ] Dashboard route visually follows `docs/ui-reference/dashboard.png`.
+- [ ] Persistent sidebar and top bar are reused from the app shell.
+- [ ] Metric cards, payroll-run table, recent exceptions, deadlines, rule packs, and exception trend area render from fake data only.
+- [ ] Ireland and UK badges, exception severity states, approval states, and due-date states match the reference visual language.
+- [ ] UI remains usable at desktop and tablet widths.
+- [ ] No real payroll data, auth, database, or external integrations are added.
+
+#### Validation
+
+- [ ] npm run typecheck
+- [ ] npm run lint
 - [ ] npm run build

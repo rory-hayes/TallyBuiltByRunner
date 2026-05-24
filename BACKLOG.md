@@ -249,13 +249,15 @@ Depends on: TASK-004,TASK-006
 
 #### Description
 
-Use fake fixtures to render a dashboard and batch list showing payroll batches by status, upcoming approvals, open exceptions, and pack readiness.
+Use fake fixtures to render a dashboard and batch list showing payroll batches by status, upcoming approvals, open exceptions, deadlines, and pack readiness. Match the visual direction in `docs/ui-reference/dashboard.png`: persistent left navigation, search/top bar, metric cards, operational table, right-side exception/deadline panels, rule-pack card, and exception trend section.
 
 #### Acceptance Criteria
 
+- [ ] Dashboard route visually follows `docs/ui-reference/dashboard.png`.
 - [ ] Dashboard uses fake data only.
-- [ ] Batch list supports empty and populated states.
+- [ ] Batch/payroll-run list supports empty and populated states.
 - [ ] Status badges match the state machine.
+- [ ] Recent exceptions, upcoming deadlines, active rule packs, and exception trend sections render.
 - [ ] No auth/database logic is added.
 
 #### Validation
@@ -274,13 +276,14 @@ Depends on: TASK-009
 
 #### Description
 
-Render a batch detail page with tabs/placeholders for Summary, Files, Mapping, Checks, Exceptions, Approvals, Audit, and Pack using fake data.
+Render a batch detail page with tabs/placeholders for Summary, Files, Mapping, Checks, Exceptions, Approvals, Audit, and Pack using fake data. The exception review surface should converge toward `docs/ui-reference/payroll-run-exceptions.png`: summary metric cards, tabs, exception queue table, reconciliation checklist, and right-side exception evidence/resolution panel.
 
 #### Acceptance Criteria
 
 - [ ] Batch detail route renders from fake data.
 - [ ] Tabs/placeholders exist.
 - [ ] Critical summary metrics are shown.
+- [ ] Exception review layout follows `docs/ui-reference/payroll-run-exceptions.png`.
 - [ ] No production integration is added.
 
 #### Validation
@@ -299,7 +302,7 @@ Depends on: TASK-006
 
 #### Description
 
-Render an exception queue with filtering by severity, status, category, client, and batch using fake data.
+Render an exception queue with filtering by severity, status, category, client, and batch using fake data. Table density, severity badges, selected-row state, and detail panel should follow `docs/ui-reference/payroll-run-exceptions.png`.
 
 #### Acceptance Criteria
 
@@ -349,12 +352,13 @@ Depends on: TASK-006
 
 #### Description
 
-Render a static reconciliation pack preview from fake data, showing summary, file inventory, checks, exceptions, approvals, and audit events.
+Render a static reconciliation/audit pack preview from fake data, showing summary, file inventory, checks, exceptions, approvals, audit events, and export actions. Match the layout direction in `docs/ui-reference/audit-pack.png`: pack preview navigation, document preview, approval workflow, client approval action card, immutable audit log, and download/export actions.
 
 #### Acceptance Criteria
 
-- [ ] Pack preview route exists.
+- [ ] Pack preview route visually follows `docs/ui-reference/audit-pack.png`.
 - [ ] Sections mirror PRODUCT_SPEC.md pack requirements.
+- [ ] Approval workflow, audit log, and export action areas render from fake data.
 - [ ] No PDF generation is added yet.
 
 #### Validation
@@ -1423,7 +1427,7 @@ Depends on: TASK-052,TASK-053,TASK-049
 
 #### Description
 
-Create guided mapping screen where users map detected file headers to canonical payroll register fields and save an import profile.
+Create guided mapping screen where users map detected file headers to canonical payroll register fields and save an import profile. Match the product direction in `docs/ui-reference/client-setup-mapping.png`: setup stepper, uploaded file preview, field mapping table, confidence states, country rule-pack panel, approval flow card, and validate/save/continue actions.
 
 #### Acceptance Criteria
 
@@ -1431,6 +1435,7 @@ Create guided mapping screen where users map detected file headers to canonical 
 - [ ] Required fields are enforced.
 - [ ] Mapping can be saved.
 - [ ] Existing profiles can be reused.
+- [ ] Layout and visual language follow `docs/ui-reference/client-setup-mapping.png`.
 
 #### Validation
 
