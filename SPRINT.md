@@ -41,7 +41,7 @@ Create or verify the base Next.js App Router application with TypeScript, npm sc
 
 ### TASK-002: Add baseline quality scripts
 
-Status: Ready
+Status: In Progress
 Priority: P0
 Area: Foundation
 Risk: Low
