@@ -8,7 +8,7 @@ This file contains only the next ready tasks. Codex must complete exactly one as
 
 ### TASK-001: Bootstrap Next.js application foundation
 
-Status: In Review
+Status: Done
 Priority: P0
 Area: Foundation
 Risk: Low
